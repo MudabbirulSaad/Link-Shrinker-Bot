@@ -17,5 +17,6 @@ Make short link by using any of GPlink, exe.io, afly.in an other API key
 * [Afly](https://afly.in/member/tools/api)
 * [Earn4Clicks](https://earn4clicks.in/member/tools/api)
 * [Za.Gl](https://za.gl/member/tools/api)
+* [exe.io](https://exe.io/member/tools/api)
 
 
