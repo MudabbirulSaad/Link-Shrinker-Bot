@@ -1,0 +1,40 @@
+{
+    "name": "LinkShortner_Bot",
+    "description": "Make short link by using any of GPlink, exe.io, afly.in an other API key",
+    "keywords": [
+        "telegram",
+        "gplink",
+        "exe.io",
+        "afly.in",
+        "earnload",
+        "other"
+    ],
+    "website": "https://github.com/MudabbirulSaad/LinkShrinkerBot",
+    "repository": "https://github.com/MudabbirulSaad/LinkShrinkerBot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token",
+            "value": ""
+        },
+        "SHORTNER_URL": {
+            "description": "Get this value from shortner website's /member/tools/developer-api but remember to put like https://yourdomain.com/api?api={}&url={}&format=json",
+            "value": ""
+        },
+        "SHORTNER_API": {
+            "description": "Get this value from shortner website's /member/tools/developer-api",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
