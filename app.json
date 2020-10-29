@@ -23,6 +23,14 @@
         "SHORTNER_API": {
             "description": "Get this value from shortner website's /member/tools/developer-api",
             "value": ""
+        },
+        "WELCOME_TEXT": {
+            "description": "Add your beloving text what you want to add in /start command",
+            "value": "Hi, I'm a Link Shortner bot currently using shortner API !\nYou can short link using me.\nJust sent me your long URL"
+        },
+        "HELP_TEXT": {
+            "description": "Add text what you wanna show in /help text",
+            "value": "Sent me any link!\n\n\nEnample:\nhttps://google.com\nhttps://bing.com"
         }
     },
     "addons": [],
