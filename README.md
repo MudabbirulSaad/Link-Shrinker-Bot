@@ -8,6 +8,8 @@ Make short link by using any of GPlink, exe.io, afly.in an other API key
 * `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
 * `SHORTNER_API`: Create any shortner account then get this value from any shortner API
 * `SHORTNER_URL`: get the value from https://yourdomain.com/member/tools/api but this should be like this: `https://yourdomain.com/api?api={}&url={}&format=json`
+* `WELCOME_TEXT`: Add your beloving text what you want to add in /start command
+* `HELP_TEXT`: Add text what you wanna show in /help text
 
 # Popular payout link shortner sites:
 * [GPLink](https://gplink.in/member/tools/api)
@@ -15,6 +17,5 @@ Make short link by using any of GPlink, exe.io, afly.in an other API key
 * [Afly](https://afly.in/member/tools/api)
 * [Earn4Clicks](https://earn4clicks.in/member/tools/api)
 * [Za.Gl](https://za.gl/member/tools/api)
-
 
 
