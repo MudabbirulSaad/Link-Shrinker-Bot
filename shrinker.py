@@ -19,7 +19,7 @@ def help(update, context):
 
 def link_handler(update, context):
 	long_link = update.message.text
-	link = SHORTNER_URL.format(SHORTNER_API, long_link)
+	link = (SHORTNER_URL.format(SHORTNER_API, long_link))
 	req = requests.get(link)
 	data = req.json()
 	short_link = data["shortenedUrl"]
