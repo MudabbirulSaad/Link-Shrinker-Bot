@@ -3,19 +3,23 @@ from telegram.ext import MessageHandler, CommandHandler, Filters, Updater
 import requests
 import logging
 
+from config import Config, Text
+
 logging.basicConfig(level=logging.INFO)
 
-SHORTNER_API = environ.get('SHORTNER_API')
-SHORTNER_URL = environ.get('SHOERNER_URL')
-BOT_TOKEN = environ.get('BOT_TOKEN')
+SHORTNER_API = environ.get('SHORTNER_API', Config.SHORTNER_API)
+SHORTNER_URL = environ.get('SHOERNER_URL', Config.SHORTNER_URL)
+BOT_TOKEN = environ.get('BOT_TOKEN', Config.BOT_TOKEN)
+WELCOME_TEXT = environ.get('WELCOME_TEXT', Text.WELCOME_TEXT)
+HELP_TEXT = environ.get('HELP_TEXT', Text.HELP_TEXT)
 
 
 def start(update, context):
-	update.message.reply_text("Hi, I'm a GPLink Shortner bot!\nYou can short link using me.\nJust sent me your long URL")
+	update.message.reply_text(WELCOME_TEXT)
 
 
 def help(update, context):
-	update.message.reply_text("Sent me any link!\n\n\nEnample:\nhttps://google.com\nhttps://bing.com")
+	update.message.reply_text(HELP_TEXT)
 
 def link_handler(update, context):
 	long_link = update.message.text
