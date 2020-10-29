@@ -1,1 +1,1 @@
-python3 shortner.py
+python3 shrinker.py
