@@ -10,6 +10,7 @@ Make short link by using any of GPlink, exe.io, afly.in an other API key
 * `SHORTNER_URL`: get the value from https://yourdomain.com/member/tools/api but this should be like this: `https://yourdomain.com/api?api={}&url={}&format=json`
 * `WELCOME_TEXT`: Add your beloving text what you want to add in /start command
 * `HELP_TEXT`: Add text what you wanna show in /help text
+* `MAINTAINER`: Add your @username and it will be shown in bot
 
 # Popular payout link shortner sites:
 * [GPLink](https://gplink.in/member/tools/api)
@@ -18,5 +19,4 @@ Make short link by using any of GPlink, exe.io, afly.in an other API key
 * [Earn4Clicks](https://earn4clicks.in/member/tools/api)
 * [Za.Gl](https://za.gl/member/tools/api)
 * [exe.io](https://exe.io/member/tools/api)
-
 

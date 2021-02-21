@@ -1,5 +1,6 @@
 from os import environ
 from telegram.ext import MessageHandler, CommandHandler, Filters, Updater
+from telegram import Update, ParseMode
 import requests
 import logging
 
@@ -12,14 +13,15 @@ SHORTNER_URL = environ.get('SHOERNER_URL', Config.SHORTNER_URL)
 BOT_TOKEN = environ.get('BOT_TOKEN', Config.BOT_TOKEN)
 WELCOME_TEXT = environ.get('WELCOME_TEXT', Text.WELCOME_TEXT)
 HELP_TEXT = environ.get('HELP_TEXT', Text.HELP_TEXT)
+MAINTAINER = environ.get('MAINTAINER',  Text.MAINTAINER)
 
 
 def start(update, context):
-	update.message.reply_text(WELCOME_TEXT)
+	update.message.reply_text(WELCOME_TEXT, parse_mode="Markdown")
 
 
 def help(update, context):
-	update.message.reply_text(HELP_TEXT)
+	update.message.reply_text(HELP_TEXT, parse_mode="Markdown")
 
 def link_handler(update, context):
 	long_link = update.message.text
@@ -27,8 +29,10 @@ def link_handler(update, context):
 	req = requests.get(link)
 	data = req.json()
 	short_link = data["shortenedUrl"]
-	print(long_link, "---", data["shortenedUrl"])
-	update.message.reply_text("Here is your shorten link: \n"+short_link+"\n\nThanks for using me!")
+	if short_link:
+	    update.message.reply_text(f" *Here is your short* [link]({short_link})!\n\n*You can copy this link too!*\n`{short_link}`\n\n*Tnx for using me!*\n*Made with ❤ by @MudabbirulSaad*\n*Bot maintained by {MAINTAINER}*", parse_mode="Markdown")
+	else:
+	    update.message.reply_text("*You entered invalid url!*", parse_mode="Markdown")
 
 def main():
 	updater = Updater(BOT_TOKEN, use_context=True)
