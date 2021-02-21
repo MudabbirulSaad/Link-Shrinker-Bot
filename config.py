@@ -1,9 +1,11 @@
+from os import environ
+
 class Config(object):
-	SHORTNER_API = "Goes here"
-	SHORTNER_URL = "https://yourdomain.com/api?api={}&url={}&format=json"
-	BOT_TOKEN = "Goes here"
+	SHORTNER_API = environ.get('SHORTNER_API')
+	SHORTNER_URL = environ.get('SHORTNER_URL')
+	BOT_TOKEN = environ.get('BOT_TOKEN')
 
 class Text(object):
-	WELCOME_TEXT = "*Hi, I'm a Link Shortner bot currently using shortner API !*\n*You can short link using me.*\n_Just sent me your long URL_"
-	HELP_TEXT = "*Sent me any link!*\n\n*Enample:*\n`https://google.com`\n`https://bing.com`"
-	MAINTAINER = "@Username"
+	WELCOME_TEXT = environ.get('WELCOME_TEXT')
+	HELP_TEXT = environ.get('HELP_TEXT')
+	MAINTAINER = environ.get('MAINTAINER')
