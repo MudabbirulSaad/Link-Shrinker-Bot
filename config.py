@@ -5,5 +5,5 @@ class Config(object):
 
 class Text(object):
 	WELCOME_TEXT = "*Hi, I'm a Link Shortner bot currently using shortner API !*\n*You can short link using me.*\n*Just sent me your long URL*"
-	HELP_TEXT = "Sent me any link!\n\nEnample:\n`https://google.com`\n`https://bing.com`"
+	HELP_TEXT = "*Sent me any link!*\n\n*Enample:*\n`https://google.com`\n`https://bing.com`"
 	MAINTAINER = "@DarkQuillium"
