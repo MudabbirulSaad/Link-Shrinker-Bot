@@ -8,12 +8,12 @@ from config import Config, Text
 
 logging.basicConfig(level=logging.INFO)
 
-SHORTNER_API = environ.get('SHORTNER_API', Config.SHORTNER_API)
-SHORTNER_URL = environ.get('SHOERNER_URL', Config.SHORTNER_URL)
-BOT_TOKEN = environ.get('BOT_TOKEN', Config.BOT_TOKEN)
-WELCOME_TEXT = environ.get('WELCOME_TEXT', Text.WELCOME_TEXT)
-HELP_TEXT = environ.get('HELP_TEXT', Text.HELP_TEXT)
-MAINTAINER = environ.get('MAINTAINER',  Text.MAINTAINER)
+SHORTNER_API = Config.SHORTNER_API
+SHORTNER_URL = Config.SHORTNER_URL
+BOT_TOKEN = Config.BOT_TOKEN
+WELCOME_TEXT = Text.WELCOME_TEXT
+HELP_TEXT = Text.HELP_TEXT
+MAINTAINER = Text.MAINTAINER
 
 
 def start(update, context):
